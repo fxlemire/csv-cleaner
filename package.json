@@ -1,0 +1,22 @@
+{
+  "name": "csv-cleaner",
+  "version": "1.0.0",
+  "description": "Removes columns and entries containing solely null values in CSV files",
+  "main": "clean-csv.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "François-Xavier Lemire <francois-xavier.lemire@mail.mcgill.ca>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.20.0",
+    "csv-parse": "^4.4.3",
+    "csv-stringify": "^5.3.0",
+    "progress": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.8",
+    "prettier": "^1.18.2"
+  }
+}
