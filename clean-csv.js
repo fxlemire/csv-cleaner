@@ -152,9 +152,9 @@ const filterCsvs = async (columnsToKeep) => {
               };
             }, {});
 
-            const isNotEmpty = Object.values(newEntry).some(
-              (value) => ![null, 0, '', undefined, 'NULL', '0'].includes(value),
-            );
+            const values = Object.values(newEntry);
+            values.shift(); // the first value is the entry ID so because it always contains a value we don't want it to determine if the entry is empty or not
+            const isNotEmpty = values.some((value) => ![null, 0, '', undefined, 'NULL', '0'].includes(value));
 
             if (isNotEmpty) {
               this.push(newEntry);
